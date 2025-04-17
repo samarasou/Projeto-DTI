@@ -10,7 +10,7 @@ const App = () => {
 
 const [alunos, setAlunos] = useState ([]);
 const [nome, setNome] = useState ("");
-const [nota, setNota] = useState (Arraay(5).fill(0));
+const [nota, setNota] = useState (Array(5).fill(0));
 const [frequência, setFrequência] = useState ("");
 
 // Função Para Adionar Um Aluno
@@ -36,19 +36,19 @@ const adicionarAluno = (e) => {
 // Função Para Remover Um Aluno
 
 const removerAluno = (index) => {
-  constnovosAlunos = [...alunos];
-  novosAlunos.splice(Index, 1);
+  const novosAlunos = [...alunos];
+  novosAlunos.splice(index, 1);
   setAlunos (novosAlunos);
 };
 
 const calcularMediaTurma = () => {
   if (alunos.lenght == 0) return 0;
-  return alunos.reduce ((acc, aluno) => acc + aluno.media, 0) / aluno.length;
+  return alunos.reduce ((acc, aluno) => acc + aluno.media, 0) / alunos.length;
 };
 
 return (
 
-  <div style = {{frontFamily: "Arial, sans-serif", padding: "20px"}}>
+  <div style = {{fontFamily: "Arial, sans-serif", padding: "20px"}}>
     <h1>Cadastro de Alunos</h1>
       <form onSubmit = {adicionarAluno}>
         <input type = "text" placeholder = "Nome" value = {nome} onChange = {(e) => setNome (e.target.value)} required />
@@ -60,9 +60,9 @@ return (
       <h2>Lista de Alunos</h2>
       {alunos.lenght > 0 ? (
         <ul>
-        {alunos.map((aluno, index) = > (
+        {alunos.map((aluno, index) => (
           <li key= {index}>
-             {aluno.nome} | Nota: {aluno.nota.toFixed(2)} | Frequência: {aluno.frequencia}%
+             {aluno.nome} | Nota: {aluno.notas.toFixed(2)} | Frequência: {aluno.frequencia}%
           </li>
         ))}
       </ul>
@@ -75,5 +75,5 @@ return (
 export default App;
 
 const root =
-  ReactDOM.createRoot (document.getElementByld("root"));
+  ReactDOM.createRoot (document.getElementById("root"));
 root.render(<App/>);
