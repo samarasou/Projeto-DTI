@@ -1,4 +1,4 @@
-  // Bibliotecas
+// Bibliotecas
 
 import React, {useState} from "react";
 
@@ -21,7 +21,7 @@ const adicionarAluno = (e) => {
     nome,
     notas,
     frequencia: parseFloat(frequencia),
-    media: notas.reduce((acc, nota) => acc + nota, 0) / nots.lenght
+    media: nota.reduce((acc, nota) => acc + nota, 0) / notas.length
     };
     setAlunos([...alunos, aluno]);
     setNome ("");
@@ -29,7 +29,9 @@ const adicionarAluno = (e) => {
     setFrequência("");
 
   } else {
-    alert ("Preencha os campos vazios.");
+    if (!nome || !frequencia || nota.some(n => n === 0)) {
+      alert ("Preencha os campos vazios.");
+      return;
   }
 };
 
@@ -42,7 +44,7 @@ const removerAluno = (index) => {
 };
 
 const calcularMediaTurma = () => {
-  if (alunos.lenght == 0) return 0;
+  if (alunos.length == 0) return 0;
   return alunos.reduce ((acc, aluno) => acc + aluno.media, 0) / alunos.length;
 };
 
