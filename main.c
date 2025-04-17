@@ -82,7 +82,7 @@ int main () {
   int numerodealunos;
   float mediasdadisciplina [disciplinas];
 
-  printf ("Qual a quantidade de alunos da sua sala?");
+  printf ("Qual a quantidade de alunos da sua sala? ");
   scanf ("%d", &numerodealunos);
 
   for (int i = 0; i < numerodealunos; i++) {
