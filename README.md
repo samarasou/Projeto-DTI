@@ -29,7 +29,7 @@ Instruções para executar o sistema
 * A frequência esperada pelo professor é de 75%.
 * A nota média de cada aluno é calculada com base na nota adiquirida nas cinco disciplinas.
 
-Decisões de Projeto
+# Decisões de Projeto
 
 * Gerenciamento de Estado: uso do useState para armazenar os dados no frontend.
 * Interface em React: usada par aumentar a interatividade e melhorar a experiência do usuário.
