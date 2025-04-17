@@ -25,7 +25,7 @@ void calcularmedias (struct Aluno alunos [], int numerodealunos, float mediasdad
   for (int i = 0; i < disciplinas; i++) {
     float soma = 0;
     for (int j = 0; j < numerodealunos; j++) {
-      soma += alunos[j].notas[i];
+      soma += alunos[i].notas[j];
     }
   mediasdadisciplina [i] = soma / numerodealunos;
   }
@@ -48,9 +48,9 @@ void calcularmediasdosalunos (struct Aluno alunos [], int numerodealunos) {
 void listaralunosacimadamedia (struct Aluno alunos [], int numerodealunos, float mediadadisciplina []) {
   float mediadaturma = 0;
   for (int i = 0; i < numerodealunos; i++) {
-    mediadaturma += alunos [i] , media;
+    mediadaturma += alunos[i].media;
   }
-mediadaturma /= numerodealunos;
+  mediadaturma /= numerodealunos;
 
 printf ("\n Alunos com média acima da média da turma: \n");
   int encontrou = 0;
@@ -89,7 +89,7 @@ int main () {
     printf ("Nome do aluno: ");
     scanf ("%s", alunos [i].nome);
 
-  printf ("Notas nas disciplinas: /n");
+  printf ("Notas nas disciplinas: \n");
     for (int j = 0; j < disciplinas; j++) {
     scanf ("%f", &alunos[i].notas [j]);
 }
