@@ -25,7 +25,7 @@ void calcularmedias (struct Aluno alunos [], int numerodealunos, float mediasdad
   for (int i = 0; i < disciplinas; i++) {
     float soma = 0;
     for (int j = 0; j < numerodealunos; j++) {
-      soma += alunos[i].notas[j];
+      soma += alunos[j].notas[i];
     }
   mediasdadisciplina [i] = soma / numerodealunos;
   }
@@ -37,7 +37,7 @@ void calcularmediasdosalunos (struct Aluno alunos [], int numerodealunos) {
   for (int i = 0; i < numerodealunos; i++) {
     float soma = 0;
     for (int j = 0; j < disciplinas; j++) {
-      soma += alunos[j].notas[i];
+      soma += alunos[i].notas[j];
     }
     alunos[i].media = soma / disciplinas;
   }
@@ -52,7 +52,7 @@ void listaralunosacimadamedia (struct Aluno alunos [], int numerodealunos, float
   }
   mediadaturma /= numerodealunos;
 
-printf ("\n Alunos com média acima da média da turma: \n");
+printf ("\nAlunos com média acima da média da turma: \n");
   int encontrou = 0;
   for (int i = 0; i < numerodealunos; i++) {
     if (alunos[i].media > mediadaturma) {
@@ -64,7 +64,7 @@ printf ("\n Alunos com média acima da média da turma: \n");
 
 // Alunos Com Frequência Abaixo de 75%
 
-printf ("\n Alunos com frequência abaixo de 75%%: \n");
+printf ("\nAlunos com frequência abaixo de 75%%: \n");
 encontrou = 0;
   for (int i = 0; i < numerodealunos; i++) {
     if (alunos [i] . frequencia < 75) {
@@ -87,9 +87,9 @@ int main () {
 
   for (int i = 0; i < numerodealunos; i++) {
     printf ("Nome do aluno: ");
-    scanf ("%s", alunos [i].nome);
+    scanf (" %[^\n]", alunos [i].nome);
 
-  printf ("Notas nas disciplinas: \n");
+  printf ("Notas nas disciplinas: ");
     for (int j = 0; j < disciplinas; j++) {
     scanf ("%f", &alunos[i].notas [j]);
 }
@@ -100,12 +100,12 @@ int main () {
 calcularmediasdosalunos (alunos, numerodealunos);
 calcularmedias (alunos, numerodealunos, mediasdadisciplina);
 
-  printf ("\n Resultados dos alunos: \n");
+  printf ("\nResultados dos alunos: \n");
     for (int i = 0; i < numerodealunos; i++) {
     printf ("%s %.2f %.2f%% \n", alunos[i].nome, alunos[i].media, alunos[i]. frequencia);
   }
 
-  printf ("\n Médias da turma por disciplina: \n");
+  printf ("\nMédias da turma por disciplina: \n");
     for (int i = 0; i < disciplinas; i++) {
     printf ("Disciplina %d: %.2f \n", i + 1, mediasdadisciplina [i]);
 }
