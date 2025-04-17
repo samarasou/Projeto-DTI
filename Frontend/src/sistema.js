@@ -19,9 +19,9 @@ const adicionarAluno = (e) => {
   e.preventDefault();
   const aluno = {
     nome,
-    notas,
+    nota,
     frequencia: parseFloat(frequencia),
-    media: nota.reduce((acc, nota) => acc + nota, 0) / notas.length
+    media: nota.reduce((acc, nota) => acc + nota, 0) / nota.length
     };
     setAlunos([...alunos, aluno]);
     setNome ("");
@@ -60,7 +60,7 @@ return (
       </form>
 
       <h2>Lista de Alunos</h2>
-      {alunos.lenght > 0 ? (
+      {alunos.length > 0 ? (
         <ul>
         {alunos.map((aluno, index) => (
           <li key= {index}>
