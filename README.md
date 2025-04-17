@@ -2,9 +2,9 @@
 
 Este é um projeto que tem como objetivo criar um sistema para facilitar a organização de um professor. Esse sistema possui como entradas o nomme dos alunos, as suas respectivas notas em cinco disciplinas diferentes e a sua frequência. A funcionalidade do sistema consiste em facilitar o calculo da media das notas dos alunos e d turma, além de expor alunos que possuam frequência abaixo da desejada pelo professor ou com nota inferior à média da turma. Foi utilizado C na construção do back-end e React no front-end.
 
-Instruções para executar o sistema
+# Instruções para executar o sistema
 
-# Backend (C)
+* Backend (C)
 
 01. Importante verificar se possui um compilador C instalado devidamente (gcc no Linux ou MinGW no Windows).
 
@@ -12,7 +12,7 @@ Instruções para executar o sistema
 
 03. Execute o programa: ./projeto_dti
 
-# Frontend (React)
+* Frontend (React)
 
 01. Importante verificar se possui o Node.js e o gerenciador de pacotes npm instalados.
 
