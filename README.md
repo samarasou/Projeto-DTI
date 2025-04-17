@@ -20,7 +20,7 @@ Frontend (React)
 
 03. execute o aplicativo "npm start".
 
-04. Acesse o sistema pelo navegador em http: //localhost:3000.
+04. Acesse o sistema pelo navegador em http: https://samarasou.github.io/Projeto-DTI/.
 
 Premissas Assumidas
 
@@ -33,12 +33,7 @@ Decisões de Projeto
 
 * Gerenciamento de Estado: uso do useState para armazenar os dados no frontend.
 * Interface em React: usada par aumentar a interatividade e melhorar a experiência do usuário.
-* 
 
 Informações Adicionais
 
 * Os dados são armazendos apenas temporariamente.
-
-
-
-
