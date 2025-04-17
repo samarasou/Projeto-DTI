@@ -33,7 +33,10 @@ Este é um projeto que tem como objetivo criar um sistema para facilitar a organ
 
 * Gerenciamento de Estado: uso do useState para armazenar os dados no frontend.
 * Interface em React: usada par aumentar a interatividade e melhorar a experiência do usuário.
+* Linguagem C: uso dela para facilitar futuras colaborações e melhorias no código por ser uma linguagem simplificada e de fácil modificação.
 
 *Informações Adicionais*
 
 * Os dados são armazendos apenas temporariamente.
+* Um erro comum é escrever o valor da frequência de um aluno seguido de "%", isso pode desencadear erros operacionais. Por isso, insira apenas o valor em números.
+* É sugerido o uso do Code::Blocks para a compilação do código do backend.
