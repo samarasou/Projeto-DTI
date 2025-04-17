@@ -7,19 +7,19 @@ import ReactDOM from "react-dom/client";
 
 const App = () => {
 
-// Estdos de Gerenciamento
+// Estados de Gerenciamento
 
 const [alunos, setAlunos] = useState ([]);
 const [nome, setNome] = useState ("");
 const [nota, setNota] = useState (Array(5).fill(0));
-const [frequencia, setFrequencia] = useState ("");
+const [frequencia, setFrequencia] = useState("");
 
 // Função Para Adionar Um Aluno
 
 const adicionarAluno = (e) => {
   e.preventDefault();
 
-  if (!nome || !frequencia || nota.some(n => n === 0)) {
+  if (!nome || !frequencia || nota.some((n) => n === 0)) {
       alert ("Preencha os campos vazios.");
       return;
   }
@@ -28,14 +28,13 @@ const adicionarAluno = (e) => {
     nome,
     nota,
     frequencia: parseFloat(frequencia),
-    media: nota.reduce((acc, nota) => acc + nota, 0) / nota.length
+    media: nota.reduce((acc, n) => acc + n, 0) / nota.length
   };
   
   setAlunos([...alunos, aluno]);
   setNome ("");
   setNota(Array(5).fill(0));
-  setFrequência("");
-
+  setFrequencia("");
 };
 
 // Função Para Remover Um Aluno
@@ -46,9 +45,13 @@ const removerAluno = (index) => {
   setAlunos (novosAlunos);
 };
 
+//Calcular Média Turma
+
 const calcularMediaTurma = () => {
-  if (alunos.length == 0) return 0;
-  return alunos.reduce ((acc, aluno) => acc + aluno.media, 0) / alunos.length;
+  if (alunos.length === 0) return 0;
+  return (
+    alunos.reduce ((acc, aluno) => acc + aluno.media, 0) / alunos.length
+  );
 };
 
 return (
@@ -56,9 +59,34 @@ return (
   <div style = {{fontFamily: "Arial, sans-serif", padding: "20px"}}>
     <h1>Cadastro de Alunos</h1>
       <form onSubmit = {adicionarAluno}>
-        <input type = "text" placeholder = "Nome" value = {nome} onChange = {(e) => setNome (e.target.value)} required />
-        <input type = "number" placeholder = "Nota" value={nota} onChange={(e)=> setNota(e.target.value)} required />
-        <input type = "number" placeholder = "Frequência (%)" value={frequencia} onChange={(e) => setFrequencia(e.target.value)} required />
+  
+        <input 
+          type="text"
+          placeholder="Nome"
+          value={nome}
+          onChange={(e) => setNome (e.target.value)} 
+          required
+          />
+            
+        <input
+          type = "number" 
+          placeholder = "Nota" 
+          value={nota[0]} 
+          onChange={(e)=> {
+             const novasNotas = [...nota];
+             novasNotas[0] = parseFloat(e.target.value);
+             setNota(novasNotas);
+            }} 
+          required 
+          />
+            
+        <input 
+          type = "number" 
+          placeholder = "Frequência (%)" 
+          value={frequencia}
+          onChange={(e) => setFrequencia(e.target.value)} 
+          required 
+          />
         <button type = "submit">Adicionar Aluno</button>
       </form>
 
@@ -67,7 +95,7 @@ return (
         <ul>
         {alunos.map((aluno, index) => (
           <li key= {index}>
-             {aluno.nome} | Nota: {aluno.media.toFixed(2)} | Frequência: {aluno.frequencia}%
+             {aluno.nome}|Nota: {aluno.media ? aluno.media.toFixed(2) : "Sem nota"}|Frequencia: {aluno.frequencia}%
           </li>
         ))}
       </ul>
@@ -79,6 +107,5 @@ return (
 };
 export default App;
 
-const root =
-  ReactDOM.createRoot (document.getElementById("root"));
+const root = ReactDOM.createRoot (document.getElementById("root"));
 root.render(<App/>);
