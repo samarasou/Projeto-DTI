@@ -1,6 +1,6 @@
 # Projeto-DTI
 
-Este é um projeto que tem como objetivo criar um sistema para facilitar a organização de um professor. Esse sistema possui como entradas o nomme dos alunos, as suas respectivas notas em cinco disciplinas diferentes e a sua frequência. A funcionalidade do sistema consiste em facilitar o calculo da media das notas dos alunos e d turma, além de expor alunos que possuam frequência abaixo da desejada pelo professor ou com nota inferior à média da turma. Foi utilizado C na construção do back-end e React no front-end.
+Este é um projeto que tem como objetivo criar um sistema para facilitar a organização de um professor. Esse sistema possui como entradas o nome dos alunos, as suas respectivas notas em cinco disciplinas diferentes e a sua frequência. A funcionalidade do sistema consiste em facilitar o cálculo da média das notas dos alunos e da turma, além de expor alunos que possuam frequência abaixo da desejada pelo professor ou com nota inferior à média da turma. Foi utilizado C na construção do back-end e React no front-end.
 
 # Instruções para executar o sistema
 
@@ -27,7 +27,7 @@ Este é um projeto que tem como objetivo criar um sistema para facilitar a organ
 * O professor terá um número até 100 alunos.
 * Cada aluno terá até 5 disciplinas.
 * A frequência esperada pelo professor é de 75%.
-* A nota média de cada aluno é calculada com base na nota adiquirida nas cinco disciplinas.
+* A nota média de cada aluno é calculada com base na nota adquirida nas cinco disciplinas.
 
 # Decisões de Projeto
 
@@ -37,6 +37,6 @@ Este é um projeto que tem como objetivo criar um sistema para facilitar a organ
 
 # Informações Adicionais
 
-* Os dados são armazendos apenas temporariamente.
+* Os dados são armazenados apenas temporariamente.
 * Um erro comum é escrever o valor da frequência de um aluno seguido de "%", isso pode desencadear erros operacionais. Por isso, insira apenas o valor em números.
 * É sugerido o uso do Code::Blocks para a compilação do código do backend.
