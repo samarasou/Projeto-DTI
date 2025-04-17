@@ -4,7 +4,7 @@ Este é um projeto que tem como objetivo criar um sistema para facilitar a organ
 
 # Instruções para executar o sistema
 
-* Backend (C)
+*Backend (C)*
 
 01. Importante verificar se possui um compilador C instalado devidamente (gcc no Linux ou MinGW no Windows).
 
