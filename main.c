@@ -36,7 +36,7 @@ void calcularmedias (struct Aluno alunos [], int numerodealunos, float mediasdad
 void calcularmediasdosalunos (struct Aluno alunos [], int numerodealunos) {
   for (int i = 0; i < numerodealunos; i++) {
     float soma = 0;
-    for (int j = 0; j < discplinas; j++) {
+    for (int j = 0; j < disciplinas; j++) {
       soma += alunos[j].notas[i];
     }
     alunos[i].media = soma / disciplinas;
@@ -47,8 +47,8 @@ void calcularmediasdosalunos (struct Aluno alunos [], int numerodealunos) {
 
 void listaralunosacimadamedia (struct Aluno alunos [], int numerodealunos, float mediadadisciplina []) {
   float mediadaturma = 0;
-  for (int = 0; i < numerodealunos; i++) {
-    mediadaturma += alunos [i] ; media;
+  for (int i = 0; i < numerodealunos; i++) {
+    mediadaturma += alunos [i] , media;
   }
 mediadaturma /= numerodealunos;
 
@@ -89,12 +89,12 @@ int main () {
     printf ("Nome do aluno: ");
     scanf ("%s", alunos [i].nome);
 
-  printf (Notas nas disciplinas: /n");
+  printf ("Notas nas disciplinas: /n");
     for (int j = 0; j < disciplinas; j++) {
     scanf ("%f", &alunos[i].notas [j]);
 }
   printf ("Frequência (%%): ");
-  scanf ("%f". &alunos[i].frequencia);
+  scanf ("%f", &alunos[i].frequencia);
   }
 
 calcularmediasdosalunos (alunos, numerodealunos);
@@ -110,7 +110,7 @@ calcularmedias (alunos, numerodealunos, mediasdadisciplina);
     printf ("Disciplina %d: %.2f \n", i + 1, mediasdadisciplina [i]);
 }
 
-listaralunosacimadamedia (alunos, numerodelaunos, mediasdadisciplina);
+listaralunosacimadamedia (alunos, numerodealunos, mediasdadisciplina);
 
 return 0;
 
